@@ -89,7 +89,7 @@ T2_iter = cell(1, NITER);
 while (iteration <= NITER && diff > 0.1)
     tic;
     
-    %% Step 1: Update Alpha 
+    %% Step 1: Update Alpha
     temp = zeros(vN, 1);
     U_con = gather(U_con); 
     
@@ -212,3 +212,4 @@ score = sum(Vcon .* Vcon, 2);  % L2-norm squared per feature
 [~, index] = sort(score, 'descend');  % Rank features by importance
 
 end
+
